@@ -23,6 +23,15 @@ const Gallery = ({ tours, setTours, onRemoveTour }) => {
         fetchTours();
     }, []); // Fetches tours
 
+    // Task 4: Handle loading and error states gracefully
+    if (loading) {
+        return <h2>Loading Tours, Please wait...</h2>
+    }
+
+    if (error) {
+        return <h2>Error: could not fetch any tours.</h2>
+    }
+
     if (tours.length === 0) { 
         return (
             <div className="gallery">
