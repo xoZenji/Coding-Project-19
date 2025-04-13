@@ -34,7 +34,7 @@ const Gallery = ({ tours, setTours, onRemoveTour }) => {
     return (
         <section className="gallery">
         {tours.map((tour) => (
-            <TourCard key={tour.id} {...tour} removeTour={removeTour} />
+            <TourCard key={tour.id} {...tour} removeTour={onRemoveTour} />
         ))}
         </section>
     ); // Maps through the tours and displays each tour card
