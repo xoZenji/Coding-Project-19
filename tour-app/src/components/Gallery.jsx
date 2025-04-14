@@ -8,7 +8,10 @@ const Gallery = ({ tours, setTours, onRemoveTour }) => {
     const fetchTours = async () => {
         try {
             setLoading(true);
-            const response = await fetch('https://course-api.com/react-tours-project');
+            const response = await fetch('https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project');
+            if (!response.ok) {
+                throw new Error("Fetching Tours: Failed!"); // Throws an error if the response is not ok
+            } // Checks if the response is ok
             const data = await response.json();
             setTours(data);
             setLoading(false);
