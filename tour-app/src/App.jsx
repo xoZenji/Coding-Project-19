@@ -1,6 +1,7 @@
 // Task 1: Setup root component with state and props structure.
 import React, { useState } from 'react'; // Imports React and useState from react
 import Gallery from './components/Gallery'; // Imports the Gallery component
+import './styles/styles.css'; // Imports the CSS styles
 
 const App = () => {
   const [tours, setTours] = useState([]);
